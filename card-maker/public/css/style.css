@@ -39,6 +39,7 @@ body {
 }
 .headerRegister.active,
 .headerLogin.active {
+    border: 1px solid black;
     background-color: lightgray;
 }
 
