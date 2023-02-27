@@ -1,0 +1,68 @@
+body {
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+}
+
+.loginAndRegisterContainer {
+    background-color: lightgrey;
+    width: 20rem;
+    height: 20rem;
+    border-radius: 30px;
+}
+
+.containerHeader {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    height: 3rem;
+    width: 100%;
+}
+
+.headerLogin {
+    border-top-left-radius: 30px;
+}
+
+.headerRegister {
+    border-top-right-radius: 30px;
+}
+
+.headerLogin,
+.headerRegister {
+    border-bottom: 1px solid black;
+    background-color: grey;
+    cursor: pointer;
+    width: 50%;
+    text-align: center;
+}
+.headerRegister.active,
+.headerLogin.active {
+    background-color: lightgray;
+}
+
+.formContainer {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    height: 17rem;
+}
+
+.loginForm.active,
+.registerForm.active {
+    display: flex;
+}
+
+.loginForm,
+.registerForm {
+    display: none;
+}
+
+.loginUser,
+.createAccount {
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+}
