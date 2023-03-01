@@ -22,16 +22,16 @@
     </div>
 
 </div>
-{{-- test --}}
+
 
 <div class="formContainer">
 
-
+{{-- loginform --}}
 <div class="loginForm active">
-    <form method="POST" class="loginUser">
+    <form method="POST" class="loginUser" action="/login">
 <div>
-    <label for="email">Email</label>
-    <input name="email" id="email" type="email" />
+    <label for="username">Username</label>
+    <input name="username" id="username" type="text" />
 </div>
 <div>
     <label for="password">Password</label>
@@ -43,11 +43,12 @@
 </form>
 </div>
 
+{{-- Registerform --}}
 <div class="registerForm">
 <form method="POST" class="createAccount">
     <div>
-        <label for="email">Email</label>
-        <input name="email" id="email" type="email" />
+        <label for="username">Username</label>
+        <input name="username" id="username" type="text" />
     </div>
     <div>
         <label for="password">Password</label>
@@ -67,4 +68,6 @@
 </body>
 </html>
 
+
+@include('errors')
 {{-- @include('errors') --}}
