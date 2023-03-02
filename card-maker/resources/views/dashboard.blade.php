@@ -1,1 +1,4 @@
-<h1>Hello World</h1>
+<a href="/logout">Log out</a>
+<p>Hello, {{ $user->name;}}!</p>
+
+@include('errors')

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,8 +29,8 @@
 <div class="loginForm active">
     <form method="POST" class="loginUser" action="/login">
 <div>
-    <label for="username">Username</label>
-    <input name="username" id="username" type="text" />
+    <label for="email">Email</label>
+    <input name="email" id="email" type="text" />
 </div>
 <div>
     <label for="password">Password</label>
@@ -45,10 +44,14 @@
 
 {{-- Registerform --}}
 <div class="registerForm">
-<form method="POST" class="createAccount">
+<form method="POST" class="createAccount" action="/createAccount">
     <div>
-        <label for="username">Username</label>
-        <input name="username" id="username" type="text" />
+        <label for="name">name</label>
+        <input name="name" id="name" type="text" />
+    </div>
+    <div>
+        <label for="email">email</label>
+        <input name="email" id="email" type="text" />
     </div>
     <div>
         <label for="password">Password</label>
