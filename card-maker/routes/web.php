@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CreateCardController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\DashboardController;
@@ -28,3 +29,5 @@ Route::post('login', LoginController::class);
 Route::get('dashboard', DashboardController::class)->middleware('auth');
 
 Route::post('createAccount', RegistrationController::class);
+
+Route::post('createCard', CreateCardController::class);
