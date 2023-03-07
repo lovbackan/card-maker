@@ -22,8 +22,11 @@ body {
     width: 30rem;
 }
 
-.createCard {
-    display: flex;
+.createCardContainer {
+    display: none;
+}
+
+.createCardContainer.active {
     justify-content: center;
     align-items: center;
     flex-direction: column;

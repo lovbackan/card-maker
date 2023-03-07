@@ -12,6 +12,9 @@
     <div class="sidebar">
 <a href="/logout">Log out</a>
 <p>Hello, {{ $user->name;}}!</p>
+<button class="createCardButton">Create Card</button>
+
+
     </div>
 
 </section>
@@ -40,6 +43,7 @@
 </div>
 
 </section>
+<script src="/js/dashboard/script.js"></script>
 </body>
 </html>
 
