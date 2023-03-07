@@ -16,11 +16,14 @@ class DashboardController extends Controller
      */
     public function __invoke()
     {
+        $user = Auth::user();
+        $userId = $user->id;
+
+        $name = $user->name;
         $categories = DB::table('categories')->get();
+        $cards = DB::table('cards')->where('user_id', '=', $userId)->get();
         // $categoryName = $categories->category_name;
 
-        $user = Auth::user();
-        $name = $user->name;
-        return view('dashboard', ['user' => Auth::user(), 'categories' => $categories],);
+        return view('dashboard', ['user' => Auth::user(), 'categories' => $categories, 'cards' => $cards],);
     }
 }

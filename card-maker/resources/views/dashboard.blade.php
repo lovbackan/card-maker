@@ -13,6 +13,7 @@
 <a href="/logout">Log out</a>
 <p>Hello, {{ $user->name;}}!</p>
 <button class="createCardButton">Create Card</button>
+<button class="showCardsButton">Show cards</button>
 
 
     </div>
@@ -37,12 +38,35 @@
 <label for="body">Body</label>
 <textarea name="body" id="textBody" rows="20" cols="30">
 </textarea>
-<button class="CardSubmit" type="submit">Create card</button>
+<button class="cardSubmit" type="submit">Create card</button>
 <input type="hidden" name="_token" id="csrf-token" value="{{ Session::token() }}" />
 </form>
 </div>
 
 </section>
+
+<section>
+    <div class="cardDisplayer">
+        @foreach ($cards as $card)
+        <div class="cardContainer">
+            <div class="title">
+            <h2>{{$card->title}} </h2>
+            </div>
+            <div class="category">
+            <h3>{{$card->card_category}}</h3>
+            </div>
+            <div class="textBody">
+            <p>{{$card->body}}</p>
+            </div>
+        </div>
+        @endforeach
+    </div>
+</section>
+
+
+
+
+
 <script src="/js/dashboard/script.js"></script>
 </body>
 </html>
