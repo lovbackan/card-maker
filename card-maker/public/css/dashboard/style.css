@@ -38,6 +38,34 @@ body {
     flex-direction: column;
 }
 
+.cardDisplayer {
+    display: none;
+}
+
+.cardDisplayer.active {
+    display: flex;
+    bottom: 0;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.cardContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: aliceblue;
+    width: 20rem;
+    height: 30rem;
+    border: red solid 1px;
+}
+
+.textBody {
+    display: -webkit-box;
+    -webkit-line-clamp: 10;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
 textarea {
     resize: none;
 }
