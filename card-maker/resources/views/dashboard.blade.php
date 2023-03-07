@@ -22,7 +22,6 @@
 </section>
 
 <section class="createCardSection">
-
 <div class="createCardContainer">
     <h1>Create card </h1>
 <form method="POST"class="createCard" action="/createCard">
@@ -30,16 +29,24 @@
 <button class="cardSubmit" type="submit">Create card</button>
 </form>
 </div>
-
 </section>
 
 <section class="editCardSection">
+    <div class="editCardContainer">
+        <h1>Edit card </h1>
     <form method="POST"class="editCard" action="/editCard">
-
-
-<input type="hidden" name="_token" id="csrf-token" value="{{ Session::token() }}" />
+        @include('partials.form-fields')
+        <button class="editCardSubmit" type="submit">Edit card</button>
     </form>
+    </div>
 </section>
+
+{{-- <section class="deleteCardSection">
+    <form method="POST"class="editCard" action="/deleteCard">
+        @include('partials.form-fields')
+        <button class="deleteCardSubmit" type="submit">Delete card</button>
+    </form>
+</section> --}}
 
 <section class="cardDisplayerSection">
     <div class="cardDisplayer">
@@ -58,6 +65,7 @@
             <div class="textBody">
             <p>{{$card->body}}</p>
             </div>
+            <button class="editCard">Edit</button>
         </div>
         @endforeach
     </div>
