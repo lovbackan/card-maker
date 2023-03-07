@@ -53,7 +53,11 @@
             <h2>{{$card->title}} </h2>
             </div>
             <div class="category">
-                <h3>{{$card->card_category}}</h3>
+                @foreach ($categories as $category)
+                    @if ($card->card_category === $category->id)
+                        <h3>{{$category->category_name}}</h3>
+                    @endif
+                @endforeach
             </div>
             <div class="textBody">
             <p>{{$card->body}}</p>
