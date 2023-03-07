@@ -21,6 +21,7 @@ class DashboardController extends Controller
 
         $name = $user->name;
         $categories = DB::table('categories')->get();
+
         $cards = DB::table('cards')->where('user_id', '=', $userId)->get();
         // $categoryName = $categories->category_name;
 

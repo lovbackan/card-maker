@@ -53,7 +53,7 @@
             <h2>{{$card->title}} </h2>
             </div>
             <div class="category">
-            <h3>{{$card->card_category}}</h3>
+                <h3>{{$card->card_category}}</h3>
             </div>
             <div class="textBody">
             <p>{{$card->body}}</p>
