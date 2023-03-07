@@ -38,7 +38,7 @@
 </div>
 <input type="hidden" name="_token" id="csrf-token" value="{{ Session::token() }}" />
 
-<button class="loginSubmit" type="submit">Login</button>
+<button class="submitButton" type="submit">Login</button>
 </form>
 </div>
 
@@ -59,7 +59,7 @@
     </div>
     <input type="hidden" name="_token" id="csrf-token" value="{{ Session::token() }}" />
 
-    <button class="registerSubmit" type="submit">Create account</button>
+    <button class="submitButton" type="submit">Create account</button>
     </div>
     </form>
 </div>

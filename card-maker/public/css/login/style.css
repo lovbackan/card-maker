@@ -1,16 +1,35 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 body {
-    background-color: antiquewhite;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(
+        -45deg,
+        rgba(2, 0, 36, 1) 0%,
+        rgba(125, 38, 163, 1) 70%
+    );
     display: flex;
     justify-content: center;
     height: 100vh;
     align-items: center;
 }
 
-.loginAndRegisterContainer {
-    background-color: lightgrey;
-    width: 20rem;
-    height: 20rem;
+.loginAndCreate {
+    background-color: transparent;
+    border-width: 2px;
+    border-style: solid;
+    border-color: white;
     border-radius: 30px;
+}
+
+.loginAndRegisterContainer {
+    background-color: none;
+    width: 20rem;
+    /* height: 20rem; */
+    border: white 2px;
 }
 
 .containerHeader {
@@ -23,24 +42,29 @@ body {
 
 .headerLogin {
     border-top-left-radius: 30px;
+    border-bottom-right-radius: 10px;
 }
 
 .headerRegister {
     border-top-right-radius: 30px;
+    border-bottom-left-radius: 10px;
 }
 
 .headerLogin,
 .headerRegister {
-    border-bottom: 1px solid black;
-    background-color: grey;
+    color: white;
+    font-size: 32px;
+    text-align: center;
+    background-color: rgba(1, 1, 1, 0.27);
     cursor: pointer;
     width: 50%;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .headerRegister.active,
 .headerLogin.active {
-    border: 1px solid black;
-    background-color: lightgray;
+    background-color: transparent;
 }
 
 .formContainer {
@@ -48,12 +72,16 @@ body {
     justify-content: center;
     text-align: center;
     align-items: center;
-    height: 17rem;
+    height: 60vh;
 }
 
 .loginForm.active,
 .registerForm.active {
     display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .loginForm,
@@ -66,4 +94,40 @@ body {
     gap: 1rem;
     display: flex;
     flex-direction: column;
+}
+
+label {
+    color: white;
+    display: block;
+    text-align: left;
+    font-size: 22px;
+}
+input[type="text"],
+input[type="password"] {
+    font-size: 26px;
+    width: 100%;
+    height: 2rem;
+    padding: 20px 15px;
+    border-color: white;
+    border-width: 2px;
+    border-radius: 10px;
+    border-style: solid;
+    background-color: rgba(1, 1, 1, 0.27);
+    margin-top: 5px;
+}
+.submitButton {
+    background-color: rgba(1, 1, 1, 0.27);
+    width: 60%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    left: 0;
+    right: 0;
+    margin-right: auto;
+    margin-left: auto;
+    border-width: 2px;
+    border-color: white;
+    border-style: solid;
+    border-radius: 15px;
+    color: white;
+    font-size: 24px;
 }
