@@ -4,9 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use App\Models\User;
 use App\Models\Card;
-use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\DB;;
 
 
@@ -29,7 +27,7 @@ class CreateCardController extends Controller
         // $newCard['category'] ska konverteras om till categories numret inte som en sträng
 
 
-        $categoryRow = DB::table('categories')->where('category_name', '=', $newCard['category'])->first();;
+        $categoryRow = DB::table('categories')->where('category_name', '=', $newCard['category'])->first();
         $categoryId = $categoryRow->id;
 
 

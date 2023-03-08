@@ -20,6 +20,10 @@ body {
 }
 
 .createCardContainer {
+    display: none;
+}
+
+.createCardContainer.active {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,19 +32,25 @@ body {
     width: 30rem;
 }
 
-.createCardContainer {
-    display: none;
-}
-
-.createCardContainer.active {
-    display: block;
-    text-align: center;
-}
-
 .editCardContainer {
     display: none;
 }
 
+.editCardContainer.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: aliceblue;
+    width: 30rem;
+}
+
+.editCard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 .createCard {
     display: flex;
     justify-content: center;

@@ -4,6 +4,7 @@ use App\Http\Controllers\CreateCardController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\EditCardController;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\RegistrationController;
 
@@ -31,3 +32,5 @@ Route::get('dashboard', DashboardController::class)->middleware('auth');
 Route::post('createAccount', RegistrationController::class);
 
 Route::post('createCard', CreateCardController::class);
+
+Route::post('editCard', EditCardController::class);

@@ -14,7 +14,8 @@
 <a href="/logout">Log out</a>
 <p>Hello, {{ $user->name;}}!</p>
 <button class="createCardButton">Create Card</button>
-<button class="showCardsButton">Show cards</button>
+<button class="showCardsButton">Show Cards</button>
+<button class="editCardsButton">Edit Cards</button>
 
 
     </div>
@@ -35,7 +36,26 @@
     <div class="editCardContainer">
         <h1>Edit card </h1>
     <form method="POST"class="editCard" action="/editCard">
-        @include('partials.form-fields')
+        <label for="cardSelector">Card selector </label>
+<select name="cardSelector" id="cardSelector">
+    @foreach ($cards as $card)
+    <option value="{{$card->title}}">{{$card->title}}</option>
+    @endforeach
+</select>
+<label for="category">Card category </label>
+<select name="category" id="category">
+    @foreach ($categories as $category)
+
+    <option value="{{$category->category_name}}">{{$category->category_name}}</option>
+
+    @endforeach
+</select>
+<label for="title">Title</label>
+<input name="title" id="title" type="text" />
+<label for="body">Body</label>
+<textarea name="body" id="textBody" rows="20" cols="30">
+</textarea>
+<input type="hidden" name="_token" id="csrf-token" value="{{ Session::token() }}" />
         <button class="editCardSubmit" type="submit">Edit card</button>
     </form>
     </div>
@@ -65,7 +85,6 @@
             <div class="textBody">
             <p>{{$card->body}}</p>
             </div>
-            <button class="editCard">Edit</button>
         </div>
         @endforeach
     </div>
