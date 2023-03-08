@@ -25,8 +25,8 @@ body {
 .sidebar {
     display: flex;
     position: absolute;
-    gap: 1rem;
     flex-direction: column;
+    justify-content: space-between;
     left: 0;
     height: 100vh;
     width: 10rem;
@@ -37,12 +37,33 @@ body {
     );
     color: white;
 }
-
+.buttomContainer {
+    display: flex;
+    flex-direction: column;
+}
+.sidebar button {
+    color: white;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    font-size: x-large;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.sidebar button::after {
+    display: block;
+    content: "";
+    height: 2px;
+    width: 100%;
+    background-color: white;
+    margin-top: 1vh;
+}
 .logout {
     color: inherit;
     text-decoration: none;
     font-size: xx-large;
     text-align: center;
+    padding-bottom: 2vh;
 }
 
 .logout::after {
