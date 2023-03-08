@@ -2,6 +2,10 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="/css/dashboard/style.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap"
+      rel="stylesheet"
+    />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -11,8 +15,8 @@
 
 <section class="sidebarSection">
     <div class="sidebar">
-<a href="/logout">Log out</a>
-<p>Hello, {{ $user->name;}}!</p>
+<a class="logout" href="/logout">Log out</a>
+<!-- <p>Hello, {{ $user->name;}}!</p> -->
 <button class="createCardButton">Create Card</button>
 <button class="showCardsButton">Show Cards</button>
 <button class="editCardsButton">Edit Cards</button>

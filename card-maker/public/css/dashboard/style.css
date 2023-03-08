@@ -1,22 +1,62 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
+    --pruple: rgba(125, 38, 163, 1);
+    --veryDarkBlue: rgba(2, 0, 36, 1);
+    --veryDarkBlueTransparant1: rgba(2, 0, 36, 0.3);
+    --veryDarkBlueTransparant2: rgba(2, 0, 36, 0.6);
+    --DarkTransparant: rgba(1, 1, 1, 0.27);
 }
 
 body {
-    background-color: antiquewhite;
+    font-family: "Inter", "sans-serif";
+    background: rgb(2, 0, 36);
+    background: linear-gradient(
+        -45deg,
+        var(--veryDarkBlue) 0%,
+        var(--pruple) 70%
+    );
+    height: 100vh;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 
 .sidebar {
     display: flex;
+    position: absolute;
     gap: 1rem;
     flex-direction: column;
     left: 0;
     height: 100vh;
     width: 10rem;
-    background-color: aqua;
+    background: linear-gradient(
+        -110deg,
+        var(--veryDarkBlueTransparant1) 0%,
+        var(--veryDarkBlueTransparant2) 95%
+    );
+    color: white;
+}
+
+.logout {
+    color: inherit;
+    text-decoration: none;
+    font-size: xx-large;
+    text-align: center;
+}
+
+.logout::after{
+   position: absolute;
+   content: '';
+   height: 2px;
+   width: 100%;
+   left: 0;
+   top: 4.5vh;
+   background-color: white;
+}
+.sidebar button {
+    color: white;
+    background-color: transparent;
 }
 
 .createCardContainer {
