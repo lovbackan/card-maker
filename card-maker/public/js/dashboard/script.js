@@ -44,7 +44,7 @@ deleteCardButton.addEventListener("click", function () {
 });
 
 const cardSelector = document.querySelector("#cardSelector");
-const editCategory = document.querySelector("#editSelector");
+const editCategory = document.querySelector("#editCategory");
 const editTitle = document.querySelector("#editTitle");
 const editBody = document.querySelector("#editTextBody");
 
@@ -57,6 +57,7 @@ cardSelector.addEventListener("change", function () {
 
     fillForm(selectedOption);
     console.log(selectedOption);
+    console.log(editCategory);
 });
 
 function fillForm(selectedOption) {
@@ -69,15 +70,16 @@ function fillForm(selectedOption) {
         const title = selectedOptionContainer
             .querySelector(".title h2")
             .textContent.trim();
-        // const category = selectedOptionContainer
-        //     .querySelector(".category h3")
-        //     .textContent.trim();
+        const category = selectedOptionContainer
+            .querySelector(".category h3")
+            .textContent.trim();
         const body = selectedOptionContainer
             .querySelector(".textBody p")
             .textContent.trim();
+        console.log(category);
 
         // Set the form field values to the values from the selected card
-        // editCategory.value = category;
+        editCategory.value = category;
         editTitle.value = title;
         editBody.value = body;
     }

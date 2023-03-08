@@ -50,6 +50,20 @@
                 <label for="category">Card category </label>
                 <select name="category" id="editCategory">
                     @foreach ($categories as $category)
+<section class="editCardSection">
+    <div class="editCardContainer">
+        <h1>Edit card </h1>
+    <form method="POST"class="editCard" action="/editCard">
+        <label for="cardSelector">Card selector </label>
+<select name="cardSelector" id="cardSelector">
+    <option value="selectCard" selected="true" disabled>Select Card</option>
+    @foreach ($cards as $card)
+    <option value="{{$card->title}}">{{$card->title}}</option>
+    @endforeach
+</select>
+<label for="category">Card category </label>
+<select name="category" id="editCategory">
+    @foreach ($categories as $category)
 
                     <option value="{{$category->category_name}}">{{$category->category_name}}</option>
 
