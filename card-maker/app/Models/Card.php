@@ -15,4 +15,9 @@ class Card extends Model
         'title',
         'body',
     ];
+    // This is a way to create relationships
+    // public function category()
+    // {
+    //     return $this->belongsTo(Category::class, 'card_category');
+    // }
 }

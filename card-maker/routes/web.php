@@ -7,6 +7,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\EditCardController;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\RegistrationController;
+use App\Http\Controllers\DeleteCardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,3 +35,5 @@ Route::post('createAccount', RegistrationController::class);
 Route::post('createCard', CreateCardController::class);
 
 Route::post('editCard', EditCardController::class);
+
+Route::post('deleteCard', DeleteCardController::class);

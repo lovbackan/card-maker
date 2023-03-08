@@ -45,14 +45,14 @@ body {
     text-align: center;
 }
 
-.logout::after{
-   position: absolute;
-   content: '';
-   height: 2px;
-   width: 100%;
-   left: 0;
-   top: 4.5vh;
-   background-color: white;
+.logout::after {
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 100%;
+    left: 0;
+    top: 4.5vh;
+    background-color: white;
 }
 .sidebar button {
     color: white;
@@ -145,4 +145,16 @@ textarea {
 #title,
 #textBody {
     text-align: center;
+}
+
+.categoryColor1 {
+    background-color: blue;
+}
+
+.categoryColor2 {
+    background-color: yellow;
+}
+
+.categoryColor3 {
+    background-color: purple;
 }

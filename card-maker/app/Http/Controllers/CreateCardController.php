@@ -24,14 +24,18 @@ class CreateCardController extends Controller
         $user = Auth::user();
         $userId = $user->id;
 
-        // $newCard['category'] ska konverteras om till categories numret inte som en sträng
+        $cardExists = Card::where('user_id', $userId)
+            ->where('title', $newCard['title'])
+            ->exists();
 
+        if ($cardExists) {
+            return back()->with('error', 'A card with the same title already exists.');
+        }
 
+        //convert the name of the category to the categoryId
         $categoryRow = DB::table('categories')->where('category_name', '=', $newCard['category'])->first();
         $categoryId = $categoryRow->id;
 
-
-        //istället att card_category blir ett namn här så borde vara card_category id't (Borde vara innerjoin) borde vara innerjoin också ifall t.ex. categories ska ha färger också etc
         Card::create(['user_id' => $userId, 'card_category' => $categoryId, 'title' => $newCard['title'], 'body' => $newCard['body']]);
 
         return back()->with('message', 'Card created succesfully!');

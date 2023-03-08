@@ -77,6 +77,7 @@
             <option value="{{$card->title}}">{{$card->title}}</option>
             @endforeach
         </select>
+        <input type="hidden" name="_token" id="csrf-token" value="{{ Session::token() }}" />
         <button class="deleteCardSubmit" type="submit">Delete card</button>
     </form>
     </div>
@@ -85,7 +86,7 @@
 <section class="cardDisplayerSection">
     <div class="cardDisplayer">
         @foreach ($cards as $card)
-        <div class="cardContainer" id="{{ str_replace(' ', '_', $card->title) }}">
+        <div class="cardContainer categoryColor{{$card -> card_category}}" id="{{ str_replace(' ', '_', $card->title) }}">
             <div class="title">
             <h2>{{$card->title}} </h2>
             </div>
@@ -103,6 +104,9 @@
         @endforeach
     </div>
 </section>
+
+
+
 
 
 
