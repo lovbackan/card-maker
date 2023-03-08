@@ -16,6 +16,7 @@
 <button class="createCardButton">Create Card</button>
 <button class="showCardsButton">Show Cards</button>
 <button class="editCardsButton">Edit Cards</button>
+<button class="deleteCardButton">Delete Card</button>
 
 
     </div>
@@ -43,7 +44,7 @@
     @endforeach
 </select>
 <label for="category">Card category </label>
-<select name="category" id="category">
+<select name="category" id="editCategory">
     @foreach ($categories as $category)
 
     <option value="{{$category->category_name}}">{{$category->category_name}}</option>
@@ -51,9 +52,9 @@
     @endforeach
 </select>
 <label for="title">Title</label>
-<input name="title" id="title" type="text" />
+<input name="title" id="editTitle" type="text" />
 <label for="body">Body</label>
-<textarea name="body" id="textBody" rows="20" cols="30">
+<textarea name="body" id="editTextBody" rows="20" cols="30">
 </textarea>
 <input type="hidden" name="_token" id="csrf-token" value="{{ Session::token() }}" />
         <button class="editCardSubmit" type="submit">Edit card</button>
@@ -61,17 +62,25 @@
     </div>
 </section>
 
-{{-- <section class="deleteCardSection">
-    <form method="POST"class="editCard" action="/deleteCard">
-        @include('partials.form-fields')
+<section class="deleteCardSection">
+    <div class="deleteCardContainer">
+        <h1> Delete Card </h1>
+    <form method="POST"class="deleteCard" action="/deleteCard">
+        <label for="cardSelector">Card selector </label>
+        <select name="cardSelector" id="cardSelector">
+            @foreach ($cards as $card)
+            <option value="{{$card->title}}">{{$card->title}}</option>
+            @endforeach
+        </select>
         <button class="deleteCardSubmit" type="submit">Delete card</button>
     </form>
-</section> --}}
+    </div>
+</section>
 
 <section class="cardDisplayerSection">
     <div class="cardDisplayer">
         @foreach ($cards as $card)
-        <div class="cardContainer">
+        <div class="cardContainer" id="{{ str_replace(' ', '_', $card->title) }}">
             <div class="title">
             <h2>{{$card->title}} </h2>
             </div>

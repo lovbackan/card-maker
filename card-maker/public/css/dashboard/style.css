@@ -19,7 +19,10 @@ body {
     background-color: aqua;
 }
 
-.createCardContainer {
+.createCardContainer,
+.editCardContainer,
+.deleteCardContainer,
+.cardDisplayer {
     display: none;
 }
 
@@ -30,10 +33,6 @@ body {
     flex-direction: column;
     background-color: aliceblue;
     width: 30rem;
-}
-
-.editCardContainer {
-    display: none;
 }
 
 .editCardContainer.active {
@@ -51,15 +50,28 @@ body {
     align-items: center;
     flex-direction: column;
 }
-.createCard {
+
+.deleteCardContainer.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: aliceblue;
+    width: 30rem;
+}
+
+.deleteCard {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-.cardDisplayer {
-    display: none;
+.createCard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .cardDisplayer.active {
