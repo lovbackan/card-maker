@@ -83,16 +83,12 @@
 <section class="cardDisplayerSection">
     <div class="cardDisplayer">
         @foreach ($cards as $card)
-        <div class="cardContainer categoryColor{{$card -> card_category}}" id="{{ str_replace(' ', '_', $card->title) }}">
+        <div class="cardContainer categoryColor{{$card->category->color}}" id="{{ str_replace(' ', '_', $card->title) }}">
             <div class="title">
             <h2>{{$card->title}} </h2>
             </div>
             <div class="category">
-                @foreach ($categories as $category)
-                    @if ($card->card_category === $category->id)
-                        <h3>{{$category->category_name}}</h3>
-                    @endif
-                @endforeach
+                <h3>{{$card->category->category_name}}</h3>
             </div>
             <div class="textBody">
             <p>{{$card->body}}</p>

@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class Card extends Model
 {
@@ -16,8 +17,9 @@ class Card extends Model
         'body',
     ];
     // This is a way to create relationships
-    // public function category()
-    // {
-    //     return $this->belongsTo(Category::class, 'card_category');
-    // }
+    public function category(): HasOne
+    {
+
+        return $this->hasOne(Category::class, 'id', 'card_category');
+    }
 }
