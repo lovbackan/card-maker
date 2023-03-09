@@ -14,7 +14,6 @@
 
     <section class="sidebarSection">
         <div class="sidebar">
-            <!-- <p>Hello, {{ $user->name;}}!</p> -->
             <div class="buttomContainer">
                 <button class="createCardButton">Create Card</button>
                 <button class="showCardsButton">Show Cards</button>
@@ -29,85 +28,24 @@
 
     <section class="createCardSection">
         <div class="createCardContainer">
-            <h1>Create card </h1>
-            <form method="POST" class="createCard" action="/createCard">
-                <label for="category">Card category </label>
-<select name="category" id="category">
-    @foreach ($categories as $category)
-
-    <option value="{{$category->category_name}}">{{$category->category_name}}</option>
-
-    @endforeach
-</select>
-<label for="title">Title</label>
-<input name="title" id="title" type="text" />
-<label for="body">Body</label>
-<textarea name="body" id="textBody" rows="20" cols="30">
-</textarea>
-<input type="hidden" name="_token" id="csrf-token" value="{{ Session::token() }}" />
-
-                <button class="cardSubmit" type="submit">Create card</button>
-            </form>
+                @include('partials.create-card-container')
         </div>
     </section>
 
     <section class="editCardSection">
         <div class="editCardContainer">
-            <h1>Edit card </h1>
-            <form method="POST" class="editCard" action="/editCard">
-                <label for="cardSelector">Card selector </label>
-                <select name="cardSelector" id="cardSelector">
-                    <option selected="true" disabled="disabled">Select Card</option>
-                    @foreach ($cards as $card)
-                    <option value="{{$card->title}}">{{$card->title}}</option>
-                    @endforeach
-                </select>
-                <label for="category">Card category </label>
-                <select name="category" id="editCategory">
-                    @foreach ($categories as $category)
-                    <option value="{{$category->category_name}}">{{$category->category_name}}</option>
-                    @endforeach
-                </select>
-                <label for="title">Title</label>
-                <input name="title" id="editTitle" type="text" />
-                <label for="body">Body</label>
-                <textarea name="body" id="editTextBody" rows="20" cols="30"></textarea>
-                <input type="hidden" name="_token" id="csrf-token" value="{{ Session::token() }}" />
-        <button class="editCardSubmit" type="submit">Edit card</button>
-    </form>
-    </div>
+                @include('partials.edit-card-container')
 </section>
 
 <section class="deleteCardSection">
     <div class="deleteCardContainer">
-        <h1> Delete Card </h1>
-    <form method="POST"class="deleteCard" action="/deleteCard">
-        <label for="cardSelector">Card selector </label>
-        <select name="cardSelector" id="cardSelector">
-            @foreach ($cards as $card)
-            <option value="{{$card->title}}">{{$card->title}}</option>
-            @endforeach
-        </select>
-        <input type="hidden" name="_token" id="csrf-token" value="{{ Session::token() }}" />
-        <button class="deleteCardSubmit" type="submit">Delete card</button>
-    </form>
-    </div>
+       @include('partials.delete-card-container')
 </section>
 
 <section class="cardDisplayerSection">
     <div class="cardDisplayer">
         @foreach ($cards as $card)
-        <div class="cardContainer categoryColor{{$card->category->color}}" id="{{ str_replace(' ', '_', $card->title) }}">
-            <div class="title">
-            <h2>{{$card->title}} </h2>
-            </div>
-            <div class="category">
-                <h3>{{$card->category->category_name}}</h3>
-            </div>
-            <div class="textBody">
-            <p>{{$card->body}}</p>
-            </div>
-        </div>
+        @include('partials.card-displayer')
         @endforeach
     </div>
     </section>

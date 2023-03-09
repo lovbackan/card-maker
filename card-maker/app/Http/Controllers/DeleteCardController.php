@@ -19,11 +19,12 @@ class DeleteCardController extends Controller
         ]);
         $user = Auth::user();
         $userId = $user->id;
+        if ($delete) {
+            Card::where('user_id', '=', $userId)
+                ->where('title', '=', $delete['cardSelector'])
+                ->delete();
 
-        $card = Card::where('user_id', '=', $userId)
-            ->where('title', '=', $delete['cardSelector'])
-            ->delete();
-
-        return back()->with('message', 'Card deleted succesfully!');
+            return back()->with('message', 'Card deleted succesfully!');
+        }
     }
 }
