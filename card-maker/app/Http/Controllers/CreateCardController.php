@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Card;
-use Illuminate\Support\Facades\DB;;
+use Illuminate\Support\Facades\DB;
 
 
 class CreateCardController extends Controller
@@ -17,7 +17,11 @@ class CreateCardController extends Controller
     {
         //
 
-        $this->validate($request, ['category', 'title', 'body']);
+        $this->validate($request, [
+            'category' => 'required',
+            'title' => 'required',
+            'body' => 'required'
+        ]);
 
         $newCard = $request->only('category', 'title', 'body');
 
