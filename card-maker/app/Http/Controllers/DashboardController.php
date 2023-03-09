@@ -20,17 +20,8 @@ class DashboardController extends Controller
     {
         $user = Auth::user();
         $userId = $user->id;
-
-        // $categories = DB::table('categories')->get();
         $categories = Category::get();
-
-        // $cards = DB::table('cards')->where('user_id', '=', $userId)->all();
-
         $cards = Card::where('user_id', '=', $userId)->get();
-
-        // die(var_dump($cards));
-        // $categoryName = $categories->category_name;
-
         return view('dashboard', ['user' => Auth::user(), 'categories' => $categories, 'cards' => $cards],);
     }
 }

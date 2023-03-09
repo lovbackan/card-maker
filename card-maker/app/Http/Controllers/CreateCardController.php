@@ -15,7 +15,8 @@ class CreateCardController extends Controller
      */
     public function __invoke(Request $request)
     {
-        //
+        $user = Auth::user();
+        $userId = $user->id;
 
         $this->validate($request, [
             'category' => 'required',
@@ -24,9 +25,6 @@ class CreateCardController extends Controller
         ]);
 
         $newCard = $request->only('category', 'title', 'body');
-
-        $user = Auth::user();
-        $userId = $user->id;
 
         $cardExists = Card::where('user_id', $userId)
             ->where('title', $newCard['title'])

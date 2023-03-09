@@ -45,9 +45,8 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function card(): HasMany
+    public function cards(): HasMany
     {
-
-        return $this->hasMany(Card::class, 'user_id');
+        return $this->hasMany(Card::class, 'user_id', 'id');
     }
 }

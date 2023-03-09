@@ -15,7 +15,11 @@ class RegistrationController extends Controller
      */
     public function __invoke(Request $request)
     {
-        $this->validate($request, ['name', 'email', 'password']);
+        $this->validate($request, [
+            'name' => 'required',
+            'email' => 'required|email|unique:users',
+            'password' => 'required|min:8'
+        ]);
 
         $newUser = $request->only('name', 'email', 'password');
 
