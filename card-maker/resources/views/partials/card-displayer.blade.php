@@ -1,5 +1,5 @@
 
-        <div class="cardContainer categoryColor{{$card->category->color}}" id="{{ str_replace(' ', '_', $card->title) }}">
+        <div class="cardContainer categoryColor{{$card->category->color}} {{$card->category->category_name}}" id="{{ str_replace(' ', '_', $card->title) }}">
             <div class="title">
             <h2>{{$card->title}} </h2>
             </div>

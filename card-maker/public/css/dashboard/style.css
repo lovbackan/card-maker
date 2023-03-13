@@ -83,7 +83,8 @@ body {
 .createCardContainer,
 .editCardContainer,
 .deleteCardContainer,
-.cardDisplayer {
+.cardDisplayer,
+.cardDisplayerSection {
     display: none;
 }
 
@@ -135,6 +136,11 @@ body {
     flex-direction: column;
 }
 
+.cardDisplayerSection.active {
+    display: block;
+    /* margin-left: 10rem; */
+}
+
 .cardDisplayer.active {
     display: flex;
     bottom: 0;
@@ -150,6 +156,18 @@ body {
     width: 20rem;
     height: 30rem;
     border: red solid 1px;
+}
+
+.cardContainer.Character,
+.cardContainer.Country,
+.cardContainer.technology {
+    display: flex;
+}
+
+.cardContainer.Character.hide,
+.cardContainer.Country.hide,
+.cardContainer.technology.hide {
+    display: none;
 }
 
 .textBody {

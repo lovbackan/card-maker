@@ -2,10 +2,13 @@ const createCardButton = document.querySelector(".createCardButton");
 const createCardContainer = document.querySelector(".createCardContainer");
 const showCardsButton = document.querySelector(".showCardsButton");
 const showCardsContainer = document.querySelector(".cardDisplayer");
+
+const showCardsSection = document.querySelector(".cardDisplayerSection");
 const editCardsButton = document.querySelector(".editCardsButton");
 const editCardsContainer = document.querySelector(".editCardContainer");
 const deleteCardButton = document.querySelector(".deleteCardButton");
 const deleteCardContainer = document.querySelector(".deleteCardContainer");
+const sortCategoryButton = document.querySelector("#cardSort");
 
 createCardButton.addEventListener("click", function () {
     createCardContainer.classList.toggle("active");
@@ -18,6 +21,7 @@ createCardButton.addEventListener("click", function () {
 
 showCardsButton.addEventListener("click", function () {
     showCardsContainer.classList.toggle("active");
+    showCardsSection.classList.toggle("active");
     if (showCardsContainer.classList.contains("active")) {
         showCardsButton.style.backgroundColor = "green"; // set button color to green
     } else {
@@ -84,3 +88,27 @@ function fillForm(selectedOption) {
         editBody.value = body;
     }
 }
+const cardContainer = document.querySelectorAll(".cardContainer");
+
+const categoryContainers = {
+    Character: document.querySelectorAll(".cardContainer.Character"),
+    Country: document.querySelectorAll(".cardContainer.Country"),
+    technology: document.querySelectorAll(".cardContainer.technology"),
+};
+
+sortCategoryButton.addEventListener("change", function () {
+    const selectedCategoryValue = sortCategoryButton.value;
+    console.log(selectedCategoryValue);
+    if (selectedCategoryValue === "All") {
+        cardContainer.forEach((element) => {
+            element.classList.remove("hide");
+        });
+    } else {
+        Object.entries(categoryContainers).forEach(([category, container]) => {
+            container.forEach((element) => {
+                const shouldHide = category !== selectedCategoryValue;
+                element.classList.toggle("hide", shouldHide);
+            });
+        });
+    }
+});

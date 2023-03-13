@@ -43,6 +43,12 @@
 </section>
 
 <section class="cardDisplayerSection">
+    <select name="cardSort" id="cardSort">
+        <option value="All">All</option>
+        @foreach ($categories as $category)
+    <option value="{{$category->category_name}}">{{$category->category_name}}</option>
+    @endforeach
+    </select>
     <div class="cardDisplayer">
         @foreach ($cards as $card)
         @include('partials.card-displayer')
