@@ -34,11 +34,11 @@
     <form method="POST" class="loginUser" action="/login">
 <div>
     <label for="email">Email</label>
-    <input name="email" id="email" type="text" />
+    <input name="email" id="email" type="text" required/>
 </div>
 <div>
     <label for="password">Password</label>
-    <input name="password" id="password" type="password" />
+    <input name="password" id="password" type="password" required/>
 </div>
 <input type="hidden" name="_token" id="csrf-token" value="{{ Session::token() }}" />
 
@@ -51,15 +51,15 @@
 <form method="POST" class="createAccount" action="/createAccount">
     <div>
         <label for="name">name</label>
-        <input name="name" id="name" type="text" />
+        <input name="name" id="name" type="text" required/>
     </div>
     <div>
         <label for="email">email</label>
-        <input name="email" id="email" type="text" />
+        <input name="email" id="email" type="text" required/>
     </div>
     <div>
         <label for="password">Password</label>
-        <input name="password" id="password" type="password" />
+        <input name="password" id="password" type="password" required/>
     </div>
     <input type="hidden" name="_token" id="csrf-token" value="{{ Session::token() }}" />
 
