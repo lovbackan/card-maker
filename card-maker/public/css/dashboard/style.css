@@ -158,6 +158,22 @@ body {
     border: red solid 1px;
 }
 
+.categoryIcon {
+    display: flex;
+    justify-self: center;
+    background-color: white;
+    border-radius: 100%;
+    height: 4rem;
+    width: 4rem;
+    margin: 0;
+    border: 1px solid black;
+}
+
+.categoryIcon img {
+    height: 4.5rem;
+    width: 4rem;
+}
+
 .cardContainer.Character,
 .cardContainer.Country,
 .cardContainer.technology {
