@@ -20,6 +20,8 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    gap: 3vh;
 }
 
 .sidebar {
@@ -68,11 +70,11 @@ body {
 
 .logout::after {
     position: absolute;
-    /* content: ""; */
+    content: "";
     height: 2px;
     width: 100%;
     left: 0;
-    top: 4.5vh;
+    margin-bottom: 1vh;
     background-color: white;
 }
 .sidebar button {
@@ -93,8 +95,13 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: aliceblue;
-    width: 30rem;
+    background-color: transparent;
+    width: fit-content;
+    border: 2px solid white;
+    border-radius: 15px;
+    padding: 10px 15px 10px 15px;
+    gap: 1vh;
+    color: white;
 }
 
 .editCardContainer.active {
@@ -102,8 +109,70 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: aliceblue;
-    width: 30rem;
+    background-color: transparent;
+    width: fit-content;
+    border: 2px solid white;
+    border-radius: 15px;
+    padding: 10px 15px 10px 15px;
+    gap: 1vh;
+    color: white;
+}
+
+.createCardContainer > * {
+    display: block;
+}
+
+.titleWraper > *,
+.bodyWraper > * {
+    display: block;
+}
+
+.titleWraper,
+.cardCategory,
+.bodyWraper {
+    width: -webkit-fill-available;
+}
+
+.titleWraper input,
+.cardCategory {
+    width: 100%;
+    font-size: 20px;
+    padding: 0px 5px 0px 5px;
+}
+input,
+select,
+textarea {
+    background-color: var(--DarkTransparant);
+    border: 2px solid white;
+    border-radius: 8px;
+    color: white;
+}
+textarea {
+    border-radius: 15px;
+}
+option {
+    color: black;
+}
+.createCardContainer label,
+.editCardContainer label {
+    font-size: 26px;
+}
+form {
+    gap: 1vh;
+}
+h1 {
+    font-size: 28px;
+}
+
+.createCardContainer button,
+.editCardContainer button {
+    background-color: var(--DarkTransparant);
+    font-size: 24px;
+    color: white;
+    width: -webkit-fill-available;
+    border: 2px solid white;
+    border-radius: 8px;
+    padding: 2px 0px 2px 0px;
 }
 
 .editCard {
@@ -192,6 +261,7 @@ body {
 
 textarea {
     resize: none;
+    width: 100%;
 }
 
 #title,
