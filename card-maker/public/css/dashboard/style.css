@@ -10,7 +10,7 @@
 }
 
 body {
-    font-family: "Inter", "sans-serif";
+    font-family: "Inter", "sans-serif" !important;
     background: rgb(2, 0, 36);
     background: linear-gradient(
         -45deg,
@@ -51,6 +51,8 @@ body {
     font-size: x-large;
     padding-top: 5px;
     padding-bottom: 5px;
+    text-align: left;
+    text-indent: 6px;
 }
 .sidebar button::after {
     display: block;
@@ -68,12 +70,11 @@ body {
     padding-bottom: 2vh;
 }
 
-.logout::after {
-    position: absolute;
+.logout::before {
+    display: block;
     content: "";
     height: 2px;
     width: 100%;
-    left: 0;
     margin-bottom: 1vh;
     background-color: white;
 }
@@ -149,6 +150,8 @@ textarea {
 }
 textarea {
     border-radius: 15px;
+    padding: 5px 8px 5px 8px;
+    font-size: 18px;
 }
 option {
     color: black;
