@@ -8,7 +8,7 @@ const editCardsButton = document.querySelector(".editCardsButton");
 const editCardsContainer = document.querySelector(".editCardContainer");
 const deleteCardButton = document.querySelector(".deleteCardButton");
 const deleteCardContainer = document.querySelector(".deleteCardContainer");
-const sortCategoryButton = document.querySelector("#cardSort");
+const sortCategoryMenu = document.querySelector("#cardSort");
 
 createCardButton.addEventListener("click", function () {
     createCardContainer.classList.toggle("active");
@@ -96,9 +96,8 @@ const categoryContainers = {
     technology: document.querySelectorAll(".cardContainer.technology"),
 };
 
-sortCategoryButton.addEventListener("change", function () {
-    const selectedCategoryValue = sortCategoryButton.value;
-    console.log(selectedCategoryValue);
+sortCategoryMenu.addEventListener("change", function () {
+    const selectedCategoryValue = sortCategoryMenu.value;
     if (selectedCategoryValue === "All") {
         cardContainer.forEach((element) => {
             element.classList.remove("hide");
