@@ -68,7 +68,7 @@ body {
 
 .logout::after {
     position: absolute;
-    content: "";
+    /* content: ""; */
     height: 2px;
     width: 100%;
     left: 0;
@@ -171,10 +171,7 @@ body {
 }
 
 .textBody {
-    display: -webkit-box;
-    -webkit-line-clamp: 10;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
+    overflow: auto;
 }
 
 textarea {
@@ -184,16 +181,4 @@ textarea {
 #title,
 #textBody {
     text-align: center;
-}
-
-.categoryColorblue {
-    background-color: blue;
-}
-
-.categoryColoryellow {
-    background-color: yellow;
-}
-
-.categoryColorpurple {
-    background-color: purple;
 }
