@@ -12,7 +12,7 @@ use Tests\TestCase;
 class LoginTest extends TestCase
 {
     use RefreshDatabase;
-
+    /** @test */
     public function test_view_login_form()
     {
         $response = $this->get('/');
@@ -36,6 +36,7 @@ class LoginTest extends TestCase
             ]);
 
         $response->assertStatus(200);
+        $response->assertViewIs('dashboard');
     }
 
     public function test_login_user_with_wrong_password()
