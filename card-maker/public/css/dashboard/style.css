@@ -91,21 +91,9 @@ body {
     display: none;
 }
 
-.createCardContainer.active {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: transparent;
-    width: fit-content;
-    border: 2px solid white;
-    border-radius: 15px;
-    padding: 10px 15px 10px 15px;
-    gap: 1vh;
-    color: white;
-}
-
-.editCardContainer.active {
+.createCardContainer.active,
+.editCardContainer.active,
+.deleteCardContainer.active {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -168,7 +156,8 @@ h1 {
 }
 
 .createCardContainer button,
-.editCardContainer button {
+.editCardContainer button,
+.deleteCardContainer button {
     background-color: var(--DarkTransparant);
     font-size: 24px;
     color: white;
@@ -183,15 +172,6 @@ h1 {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-}
-
-.deleteCardContainer.active {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: aliceblue;
-    width: 30rem;
 }
 
 .deleteCard {
