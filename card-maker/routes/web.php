@@ -32,8 +32,8 @@ Route::get('dashboard', DashboardController::class)->middleware('auth');
 
 Route::post('createAccount', RegistrationController::class);
 
-Route::post('createCard', CreateCardController::class);
+Route::post('createCard', CreateCardController::class)->middleware('auth');
 
-Route::post('editCard', EditCardController::class);
+Route::post('editCard', EditCardController::class)->middleware('auth');
 
-Route::post('deleteCard', DeleteCardController::class);
+Route::post('deleteCard', DeleteCardController::class)->middleware('auth');

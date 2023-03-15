@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\Card;
 use App\Models\Category;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\DB;
 
 
 class DashboardController extends Controller

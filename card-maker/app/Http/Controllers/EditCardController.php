@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Card;
 use App\Models\Category;
-use Illuminate\Support\Facades\DB;;
 
 class EditCardController extends Controller
 {
@@ -15,6 +14,8 @@ class EditCardController extends Controller
      */
     public function __invoke(Request $request)
     {
+        $user = Auth::user();
+        $userId = $user->id;
 
         $edit = $request->validate([
             'cardSelector' => 'required',
@@ -23,8 +24,6 @@ class EditCardController extends Controller
             'body' => 'required'
         ]);
 
-        $user = Auth::user();
-        $userId = $user->id;
 
         $card = Card::where('user_id', '=', $userId)
             ->where('title', '=', $edit['cardSelector'])
