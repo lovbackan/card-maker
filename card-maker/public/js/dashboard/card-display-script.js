@@ -7,14 +7,17 @@ slider.addEventListener("mousedown", (e) => {
     isDown = true;
     startX = e.pageX - slider.offsetLeft;
     scrolledLeft = slider.scrollLeft;
+    slider.style.cursor = "grabbing";
 });
 
 slider.addEventListener("mouseleave", () => {
     isDown = false;
+    slider.style.cursor = "";
 });
 
 slider.addEventListener("mouseup", () => {
     isDown = false;
+    slider.style.cursor = "";
 });
 
 slider.addEventListener("mousemove", (e) => {

@@ -204,6 +204,11 @@ h1 {
     flex-wrap: nowrap;
     gap: 0.5vw;
     overflow-x: scroll;
+    cursor: grab;
+}
+
+#cardSort {
+    margin-bottom: 5px;
 }
 
 .cardContainer {
@@ -211,8 +216,8 @@ h1 {
     align-items: center;
     flex-direction: column;
     background-color: transparent;
-    width: 20rem;
-    height: 30rem;
+    width: 18rem;
+    height: 26rem;
     border: white solid 2px;
     border-radius: 15px;
     color: white;
