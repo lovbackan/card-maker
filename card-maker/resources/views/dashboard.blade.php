@@ -29,35 +29,35 @@
 
     <section class="createCardSection">
         <div class="createCardContainer">
-                @include('partials.create-card-container')
+            @include('partials.create-card-container')
         </div>
     </section>
 
     <section class="editCardSection">
         <div class="editCardContainer">
-                @include('partials.edit-card-container')
-</section>
-
-<section class="deleteCardSection">
-    <div class="deleteCardContainer">
-       @include('partials.delete-card-container')
-</section>
-
-<section class="cardDisplayerSection">
-    <select name="cardSort" id="cardSort">
-        <option value="All">All</option>
-        @foreach ($categories as $category)
-    <option value="{{$category->category_name}}">{{$category->category_name}}</option>
-    @endforeach
-    </select>
-    <div class="cardDisplayer">
-        @foreach ($cards as $card)
-        @include('partials.card-displayer')
-        @endforeach
-    </div>
+            @include('partials.edit-card-container')
     </section>
 
-<script src="/js/dashboard/script.js"></script>
+    <section class="deleteCardSection">
+        <div class="deleteCardContainer">
+            @include('partials.delete-card-container')
+    </section>
+
+    <section class="cardDisplayerSection">
+        <select name="cardSort" id="cardSort">
+            <option value="All">All</option>
+            @foreach ($categories as $category)
+            <option value="{{$category->category_name}}">{{$category->category_name}}</option>
+            @endforeach
+        </select>
+        <div class="cardDisplayer">
+            @foreach ($cards as $card)
+            @include('partials.card-displayer')
+            @endforeach
+        </div>
+    </section>
+
+    <script src="/js/dashboard/script.js"></script>
 </body>
 
 </html>
