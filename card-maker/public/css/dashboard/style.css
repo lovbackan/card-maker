@@ -310,7 +310,6 @@ h1 {
 }
 /* sidebar button transition */
 .sidebarButtonActive {
-    font-size: 26px !important;
     font-weight: 500;
-    text-indent: 10% !important;
+    text-indent: 15% !important;
 }
