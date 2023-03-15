@@ -16,7 +16,7 @@ class DeleteCardTest extends TestCase
      */
     /** @test */
     use RefreshDatabase;
-    public function edit_card(): void
+    public function delete_card(): void
     {
         $user = new User();
         $user->name = 'Mr Robot';
