@@ -146,9 +146,9 @@ textarea {
     width: 100%;
     height: 100%;
 }
-    /*create card  height: 28vh; */
+/*create card  height: 28vh; */
 
-    /*edit card height: 20vh; */
+/*edit card height: 20vh; */
 option {
     color: black;
 }
@@ -231,6 +231,26 @@ h1 {
     flex-grow: 0;
     flex-shrink: 0;
     overflow: hidden;
+    padding: 10px 15px 10px 15px;
+    gap: 1rem;
+}
+
+.cardContainer .title,
+.cardContainer .category,
+.cardContainer .textBody{
+    order: 2;
+}
+
+.cardContainer .title {
+    font-size: 22px;
+}
+
+.cardContainer .category {
+    font-size: 20px;
+}
+
+.cardContainer .textBody {
+    font-size: 18px;
 }
 
 .categoryIcon {
@@ -241,12 +261,14 @@ h1 {
     height: 4rem;
     width: 4rem;
     margin: 0;
-    border: 1px solid black;
+    order: 1;
+    flex-shrink: 0;
 }
 
 .categoryIcon img {
-    height: 4.5rem;
-    width: 4rem;
+    height: inherit;
+    width: inherit;
+    display: none;
 }
 
 .cardContainer.Character,
