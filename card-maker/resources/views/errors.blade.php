@@ -1,7 +1,7 @@
 @if ($errors->any())
-<section class="error">
-<p>
-    <u>{{ $errors->first() }}</u>
-</p>
-</section>
+
+<div class="alert alert-danger">
+    {{ $errors->first() }}
+</div>
+
 @endif
