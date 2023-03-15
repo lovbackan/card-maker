@@ -21,7 +21,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* gap: 3vh; */
     overflow-x: hidden;
 }
 
@@ -121,7 +120,8 @@ body {
 
 .titleWraper,
 .cardCategory,
-.bodyWraper {
+.bodyWraper,
+#cardSelector {
     width: -webkit-fill-available;
 }
 
@@ -147,9 +147,7 @@ textarea {
     width: 100%;
     height: 100%;
 }
-/*create card  height: 28vh; */
 
-/*edit card height: 20vh; */
 option {
     color: black;
 }
