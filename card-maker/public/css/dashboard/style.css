@@ -100,7 +100,7 @@ body {
     align-items: center;
     flex-direction: column;
     background-color: transparent;
-    width: fit-content;
+    width: 25rem;
     border: 2px solid white;
     border-radius: 15px;
     padding: 10px 15px 10px 15px;
@@ -126,7 +126,8 @@ body {
 }
 
 .titleWraper input,
-.cardCategory {
+.cardCategory,
+#cardSelector {
     width: 100%;
     font-size: 20px;
     padding: 0px 5px 0px 5px;
@@ -186,6 +187,7 @@ h1 {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    width: 100%;
 }
 
 .createCard {
