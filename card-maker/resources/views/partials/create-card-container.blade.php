@@ -1,7 +1,7 @@
 <h1>Create card</h1>
 <form method="POST" class="createCard" action="/createCard">
     <select class="cardCategory" name="category" id="category">
-        <option style="display:none;">Category</option>
+        <option selected="true" disabled="disabled">Pick category</option>
         @foreach ($categories as $category)
 
         <option value="{{$category->category_name}}">{{$category->category_name}}</option>
