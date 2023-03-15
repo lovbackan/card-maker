@@ -2,7 +2,7 @@
 <form method="POST" class="editCard" action="/editCard">
 
     <select class="cardCategory" name="cardSelector" id="cardSelector">
-        <option style="display: none;">Select Card</option>
+        <option selected="true" disabled="disabled">Select Card</option>
         @foreach ($cards as $card)
         <option value="{{$card->title}}">{{$card->title}}</option>
         @endforeach
