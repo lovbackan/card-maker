@@ -238,13 +238,13 @@ h1 {
 
 .cardContainer.Character,
 .cardContainer.Country,
-.cardContainer.technology {
+.cardContainer.Technology {
     display: flex;
 }
 
 .cardContainer.Character.hide,
 .cardContainer.Country.hide,
-.cardContainer.technology.hide {
+.cardContainer.Technology.hide {
     display: none;
 }
 

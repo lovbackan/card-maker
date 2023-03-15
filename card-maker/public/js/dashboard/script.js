@@ -93,8 +93,10 @@ const cardContainer = document.querySelectorAll(".cardContainer");
 const categoryContainers = {
     Character: document.querySelectorAll(".cardContainer.Character"),
     Country: document.querySelectorAll(".cardContainer.Country"),
-    technology: document.querySelectorAll(".cardContainer.technology"),
+    Technology: document.querySelectorAll(".cardContainer.Technology"),
 };
+
+console.log(document.querySelectorAll(".cardContainer.Technology"));
 
 sortCategoryMenu.addEventListener("change", function () {
     const selectedCategoryValue = sortCategoryMenu.value;

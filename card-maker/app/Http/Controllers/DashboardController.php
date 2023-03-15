@@ -20,6 +20,16 @@ class DashboardController extends Controller
     {
         $user = Auth::user();
         $userId = $user->id;
+
+        if (Category::count() == 0) {
+            // Create default categories
+            $categories = [
+                ['category_name' => 'Character', 'color' => 'Pink'],
+                ['category_name' => 'Technology', 'color' => 'Purple'],
+                ['category_name' => 'Country', 'color' => 'Green'],
+            ];
+            Category::insert($categories);
+        }
         $categories = Category::get();
         $cards = Card::where('user_id', '=', $userId)->get();
         return view('dashboard', ['user' => Auth::user(), 'categories' => $categories, 'cards' => $cards],);

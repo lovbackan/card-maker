@@ -34,7 +34,6 @@ class CreateCardTest extends TestCase
         $response->assertStatus(200);
         $response->assertViewIs('dashboard');
 
-        //det är som att man hamnar på en annan sida av detta
         $response = $this
             ->followingRedirects()
             ->post('createCard', [
@@ -43,12 +42,11 @@ class CreateCardTest extends TestCase
                 'body' => 'Test Card Body'
             ]);
 
-        $response->assertRedirect('/dashboard');
-        // $this->assertDatabaseHas('cards', [
-        //     'user_id' => $user->id,
-        //     'card_category' => 1, // or whatever category ID TestCategory corresponds to in the database
-        //     'title' => 'Test Card Title',
-        //     'body' => 'Test Card Body'
-        // ]);
+        $this->assertDatabaseHas('cards', [
+            'user_id' => $user->id,
+            'card_category' => 1,
+            'title' => 'Test Card Title',
+            'body' => 'Test Card Body'
+        ]);
     }
 }
