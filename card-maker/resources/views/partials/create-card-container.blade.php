@@ -15,7 +15,7 @@
 
     <div class="bodyWraper">
         <label for="body">Body</label>
-        <textarea name="body" id="textBody" rows="20" cols="30"></textarea>
+        <textarea name="body" id="textBody" rows="11" cols="30"></textarea>
     </div>
     <input type="hidden" name="_token" id="csrf-token" value="{{ Session::token() }}" />
 
