@@ -8,7 +8,7 @@
                 <h3>{{$card->category->category_name}}</h3>
 
             </div>
-            <div class="categoryIcon">
+            <div class="categoryIcon" style="background-color: {{$card->category->color}}">
                 <img src="/icons/{{$card->category->category_name}}.svg">
             </div>
             <div class="textBody">
