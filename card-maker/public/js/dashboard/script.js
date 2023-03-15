@@ -10,40 +10,52 @@ const deleteCardButton = document.querySelector(".deleteCardButton");
 const deleteCardContainer = document.querySelector(".deleteCardContainer");
 const sortCategoryMenu = document.querySelector("#cardSort");
 
-createCardButton.addEventListener("click", function () {
-    createCardContainer.classList.toggle("active");
-    if (createCardContainer.classList.contains("active")) {
-        createCardButton.style.backgroundColor = "green"; // set button color to green
+function toggleButton(button, container, section = null) {
+    container.classList.toggle("active");
+    if (container.classList.contains("active")) {
+        button.style.backgroundColor = "green";
+        if (section !== null) {
+            section.classList.toggle("active");
+        }
     } else {
-        createCardButton.style.backgroundColor = ""; // remove button color
+        button.style.backgroundColor = "";
+        if (section !== null) {
+            section.classList.toggle("active");
+        }
+    }
+}
+
+createCardButton.addEventListener("click", function () {
+    toggleButton(createCardButton, createCardContainer);
+
+    if (deleteCardContainer.classList.contains("active")) {
+        toggleButton(deleteCardButton, deleteCardContainer);
+    } else if (editCardsContainer.classList.contains("active")) {
+        toggleButton(editCardsButton, editCardsContainer);
     }
 });
 
 showCardsButton.addEventListener("click", function () {
-    showCardsContainer.classList.toggle("active");
-    showCardsSection.classList.toggle("active");
-    if (showCardsContainer.classList.contains("active")) {
-        showCardsButton.style.backgroundColor = "green"; // set button color to green
-    } else {
-        showCardsButton.style.backgroundColor = ""; // remove button color
-    }
+    toggleButton(showCardsButton, showCardsContainer, showCardsSection);
 });
 
 editCardsButton.addEventListener("click", function () {
-    editCardsContainer.classList.toggle("active");
-    if (editCardsContainer.classList.contains("active")) {
-        editCardsButton.style.backgroundColor = "green"; // set button color to green
-    } else {
-        editCardsButton.style.backgroundColor = ""; // remove button color
+    toggleButton(editCardsButton, editCardsContainer);
+
+    if (createCardContainer.classList.contains("active")) {
+        toggleButton(createCardButton, createCardContainer);
+    } else if (deleteCardContainer.classList.contains("active")) {
+        toggleButton(deleteCardButton, deleteCardContainer);
     }
 });
 
 deleteCardButton.addEventListener("click", function () {
-    deleteCardContainer.classList.toggle("active");
-    if (deleteCardContainer.classList.contains("active")) {
-        deleteCardButton.style.backgroundColor = "green"; // set button color to green
-    } else {
-        deleteCardButton.style.backgroundColor = ""; // remove button color
+    toggleButton(deleteCardButton, deleteCardContainer);
+
+    if (createCardContainer.classList.contains("active")) {
+        toggleButton(createCardButton, createCardContainer);
+    } else if (editCardsContainer.classList.contains("active")) {
+        toggleButton(editCardsButton, editCardsContainer);
     }
 });
 
