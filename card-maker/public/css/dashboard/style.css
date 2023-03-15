@@ -237,19 +237,19 @@ h1 {
 
 .cardContainer .title,
 .cardContainer .category,
-.cardContainer .textBody{
+.cardContainer .textBody {
     order: 2;
 }
 
-.cardContainer .title {
-    font-size: 22px;
+.cardContainer h2 {
+    font-size: 22px !important;
 }
 
-.cardContainer .category {
+.cardContainer h3 {
     font-size: 20px;
 }
 
-.cardContainer .textBody {
+.cardContainer p {
     font-size: 18px;
 }
 
@@ -268,7 +268,6 @@ h1 {
 .categoryIcon img {
     height: inherit;
     width: inherit;
-    display: none;
 }
 
 .cardContainer.Character,
