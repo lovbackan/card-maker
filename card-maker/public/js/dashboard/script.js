@@ -13,12 +13,12 @@ const sortCategoryMenu = document.querySelector("#cardSort");
 function toggleButton(button, container, section = null) {
     container.classList.toggle("active");
     if (container.classList.contains("active")) {
-        button.style.backgroundColor = "green";
+        button.classList.add("sidebarButtonActive");
         if (section !== null) {
             section.classList.toggle("active");
         }
     } else {
-        button.style.backgroundColor = "";
+        button.classList.remove("sidebarButtonActive");
         if (section !== null) {
             section.classList.toggle("active");
         }

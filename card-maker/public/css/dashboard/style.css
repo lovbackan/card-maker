@@ -52,7 +52,7 @@ body {
     padding-top: 5px;
     text-align: left;
     text-indent: 6px;
-    transition: 200ms;
+    transition: 1s ease;
 }
 .sidebar button::after {
     display: block;
@@ -307,4 +307,10 @@ h1 {
 ::-webkit-scrollbar-thumb {
     background-color: rgb(39, 39, 39);
     border-radius: 100vw;
+}
+/* sidebar button transition */
+.sidebarButtonActive {
+    font-size: 26px !important;
+    font-weight: 500;
+    text-indent: 10% !important;
 }
