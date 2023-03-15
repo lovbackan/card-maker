@@ -17,9 +17,9 @@
         <div class="sidebar">
             <div class="buttomContainer">
                 <button class="createCardButton">Create Card</button>
-                <button class="showCardsButton">Show Cards</button>
                 <button class="editCardsButton">Edit Cards</button>
                 <button class="deleteCardButton">Delete Card</button>
+                <button class="showCardsButton">Show Cards</button>
             </div>
             <a class="logout" href="/logout">Log out</a>
 
