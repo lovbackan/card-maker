@@ -4,7 +4,6 @@ namespace Tests\Feature;
 
 use Illuminate\Foundation\Auth\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Support\Facades\Hash;
 use Tests\TestCase;
 
@@ -31,8 +30,8 @@ class CreateCardTest extends TestCase
                 'password' => '123',
             ]);
 
-        $response->assertStatus(200);
         $response->assertViewIs('dashboard');
+        $response->assertStatus(200);
 
         $response = $this
             ->followingRedirects()

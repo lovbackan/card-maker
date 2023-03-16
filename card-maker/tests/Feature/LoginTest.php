@@ -35,8 +35,8 @@ class LoginTest extends TestCase
                 'password' => '123',
             ]);
 
-        $response->assertStatus(200);
         $response->assertViewIs('dashboard');
+        $response->assertStatus(200);
     }
 
     public function test_login_user_with_wrong_password()
