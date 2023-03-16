@@ -16,7 +16,7 @@ class RegisterTest extends TestCase
     public function test_view_register_form()
     {
         $response = $this->get('/');
-        $response->assertSeeText('name');
+        $response->assertSeeText('Name');
         $response->assertStatus(200);
     }
     /** @test */
