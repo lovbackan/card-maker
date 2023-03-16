@@ -50,11 +50,11 @@
 <div class="registerForm">
 <form method="POST" class="createAccount" action="/createAccount">
     <div>
-        <label for="name">name</label>
+        <label for="name">Name</label>
         <input name="name" id="name" type="text" required/>
     </div>
     <div>
-        <label for="email">email</label>
+        <label for="email">Email</label>
         <input name="email" id="email" type="text" required/>
     </div>
     <div>
