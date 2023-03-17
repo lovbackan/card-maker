@@ -2,6 +2,8 @@
 
 A site where u can create, read, update and delete cards(crud). Ment to help organize and overview a process where a structure of cards could be helpful.
 
+Created by Simon Lövbacka(https://github.com/lovbackan) & Styrbjörn Nordberg(https://github.com/styrbjorn-n)
+
 Code review written by [Tommi Uusitalo](https://github.com/tpku) & [Axel Enghamre](https://github.com/AxelEnghamre).
 
 1. `CreateCardController.php: 39` - If category id is null the site crashes. Add a redirect and print and catch an error message if category is null.
