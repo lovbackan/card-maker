@@ -6,7 +6,7 @@ Created by [Simon Lövbacka](https://github.com/lovbackan) & [Styrbjörn Nordber
 
 # Stack
 
-Php (Laravel), Javascript, Html, Css
+PHP (Laravel), Javascript, HTML, CSS, Tailwind.
 
 # Code review
 
