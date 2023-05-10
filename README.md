@@ -1,6 +1,7 @@
 ## Card Maker
 
-A site where u can create, read, update and delete cards(crud). Ment to help organize and overview a process where a structure of cards could be helpful.
+Our first project with Laravel, studying web development at YRGO.
+We created a site where u can create, read, update and delete cards(with the crud principle). Ment to help organize and overview a process where a structure of cards could be helpful, for example when u are writing a book or creating a world.
 
 Created by [Simon Lövbacka](https://github.com/lovbackan) & [Styrbjörn Nordberg](https://github.com/styrbjorn-n)
 
